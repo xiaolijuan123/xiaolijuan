@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link rel="stylesheet" rev="stylesheet" href="./css/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js" ></script>
+
+
+
+<style type="text/css">
+<!--
+.atten {font-size:12px;font-weight:normal;color:#F00;}
+-->
+</style>
+</head>
+
+<body class="ContentBody">
+ <div id='title'>aaaaaa</div>
+ <a id="xg" href="javascript:changeTitle()">修改标题</a>
+ <input type="hidden" id="ec" value="12"/>
+ <input style="display:none" id="tvalue" type="text" value=""/>
+ <div id="bc"style="display:none">
+ <a  href="javascript:Save()">保存</a>
+ <a  href="javascript:Cancel()">取消</a>
+ </div>
+    <script type="text/javascript">
+      var changeTitle=function () {
+      	$("#tvalue").val($("#title").html());
+      	$("#title").hide();
+      	$("#tvalue").show();
+      	$("#xg").hide();
+      	$("#bc").show();
+      }
+      var Save=function (){
+      	var title=$("#tvalue").val();
+		//var ec=("#ec").val();
+		
+      	//$.get("xxx",{title:title},function () {
+      		$("#title").html(title);
+      		$("#title").show();
+      		$("#tvalue").hide();
+      		$("#xg").show();
+      		$("#bc").hide();
+
+      	//})
+      }
+      var Cancel=function (){
+      	$("#title").show();
+      	$("#tvalue").hide();
+      	$("#xg").show();
+      	$("#bc").hide();
+      }
+    </script>
+</body>
+</html>

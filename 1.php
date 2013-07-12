@@ -1,0 +1,10 @@
+<html>
+<head>
+</head>
+<body>
+<?php
+$ec=$_GET['ids'];
+echo $ec."111";
+?>
+</body>
+</html>
